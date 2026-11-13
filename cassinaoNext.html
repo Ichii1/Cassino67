@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Vegas Deluxe</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto+Mono:wght@700&family=Oswald:wght@700&display=swap');
@@ -276,15 +275,15 @@
         .audio-status { font-size: 11px; color: #9a9a9a; letter-spacing: 0.5px; }
 
         /* === MODO DESEMPENHO === */
-        body.perf *, body.perf *::before, body.perf *::after { box-shadow: none !important; text-shadow: none !important; filter: none !important; backdrop-filter: none !important; }
-        body.perf.alarm-red, body.perf.alarm-jackpot, body.perf.win-green, body.perf.win-green-weak, body.perf.win-rainbow { animation: none !important; }
-        body.perf.alarm-red { background-color: #6a0010; } body.perf.alarm-jackpot { background-color: #b00000; } body.perf.win-green, body.perf.win-green-weak { background-color: #00662a; } body.perf.win-rainbow { background-color: #b8860b; }
-        body.perf .sunburst, body.perf .confete, body.perf .shockwave, body.perf .coin-particle, body.perf .brilho-tela, body.perf .flash-tela { display: none !important; }
-        body.perf .cabinet, body.perf .cabinet.shake-mode, body.perf .cabinet.explosion-shake, body.perf .cabinet.tremor { animation: none !important; }
-        body.perf .marquee-lights, body.perf .header-marquee, body.perf .header-marquee h1, body.perf .header-marquee p, body.perf .msg-board.festa, body.perf .led-val.pulse-up, body.perf .reel-window.pulse, body.perf .reel-window.win-glow, body.perf .reel-window.win-glow .symbol-box, body.perf .reel-window.win-glow .cell.mid .symbol-box { animation: none !important; }
-        body.perf .reel-window.win-glow { border-color: #ffd700; }
-        body.perf .strip.girando { animation-duration: 0.5s; }
-        body.perf .money-note { display: none !important; }
+        html.perf *, html.perf *::before, html.perf *::after { box-shadow: none !important; text-shadow: none !important; filter: none !important; backdrop-filter: none !important; }
+        html.perf body.alarm-red, html.perf body.alarm-jackpot, html.perf body.win-green, html.perf body.win-green-weak, html.perf body.win-rainbow { animation: none !important; }
+        html.perf body.alarm-red { background-color: #6a0010; } html.perf body.alarm-jackpot { background-color: #b00000; } html.perf body.win-green, html.perf body.win-green-weak { background-color: #00662a; } html.perf body.win-rainbow { background-color: #b8860b; }
+        html.perf .sunburst, html.perf .confete, html.perf .shockwave, html.perf .coin-particle, html.perf .brilho-tela, html.perf .flash-tela { display: none !important; }
+        html.perf .cabinet, html.perf .cabinet.shake-mode, html.perf .cabinet.explosion-shake, html.perf .cabinet.tremor { animation: none !important; }
+        html.perf .marquee-lights, html.perf .header-marquee, html.perf .header-marquee h1, html.perf .header-marquee p, html.perf .msg-board.festa, html.perf .led-val.pulse-up, html.perf .reel-window.pulse, html.perf .reel-window.win-glow, html.perf .reel-window.win-glow .symbol-box, html.perf .reel-window.win-glow .cell.mid .symbol-box { animation: none !important; }
+        html.perf .reel-window.win-glow { border-color: #ffd700; }
+        html.perf .strip.girando { animation-duration: 0.5s; }
+        html.perf .money-note { display: none !important; }
         .btn-perf.on { border-color: #7cff3a !important; color: #7cff3a !important; }
         @media (prefers-reduced-motion: reduce) {
             .reel-window.win-glow, .reel-window.win-glow .symbol-box, .sunburst, .cabinet.festa .marquee-lights, .msg-board.festa, .cabinet.festa-jp .header-marquee, .cabinet.festa-jp .header-marquee h1, .cabinet.festa-jp .header-marquee p { animation: none; }
@@ -493,9 +492,9 @@
         .mn-jogar:active { transform: translateY(4px); box-shadow: 0 2px 0 #5a3b00; }
         .mn-jogar:focus-visible, .mn-dif:focus-visible, .mn-tema:focus-visible, .mn-tg button:focus-visible { outline: 3px solid #00ffff; outline-offset: 2px; }
         @keyframes mnPulso { from { transform: scale(1); } to { transform: scale(1.03); } }
-        body.perf .menu-ini::before { display: none; }
-        body.perf .mn-jogar { animation: none !important; }
-        body.perf .mn-logo h1 { filter: none; }
+        html.perf .menu-ini::before { display: none; }
+        html.perf .mn-jogar { animation: none !important; }
+        html.perf .mn-logo h1 { filter: none; }
         @media (max-width: 560px) { .mn-difs { grid-template-columns: repeat(2, 1fr); } .mn-box { gap: 16px; } .mn-logo .ico { font-size: 42px; } }
         @media (prefers-reduced-motion: reduce) { .mn-jogar { animation: none; } }
     </style>
@@ -509,7 +508,7 @@
         <button id="btn-sfx" type="button" aria-label="Efeitos sonoros" onclick="Som.alternarSfx()">🔊</button>
         <button id="btn-music" type="button" aria-label="Música de fundo" onclick="Som.alternarMusica()">🎵</button>
         <button id="btn-tema" type="button" aria-label="Temas" aria-expanded="false" onclick="alternarPainelTema()">🎨</button>
-        <button id="btn-rec" type="button" aria-label="Recordes" onclick="abrirAba(document.getElementById('aba-recordes').hidden ? 'rec' : 'jogo')" style="width:auto;padding:0 10px;font-weight:800;font-size:13px">🏆 <span id="chip-rec">$100</span></button>
+        <button id="btn-rec" type="button" aria-label="Recordes" onclick="abrirAba(document.getElementById('aba-recordes').hidden ? 'rec' : 'jogo')" style="width:auto;padding:0 10px;font-weight:800;font-size:13px">🏆 <span id="chip-rec">—</span></button>
         <button id="btn-menu" type="button" aria-label="Menu" onclick="abrirMenu()">🏠</button>
         <button id="btn-vol" type="button" aria-label="Volume" aria-expanded="false" onclick="Som.alternarPainel()">⚙️</button>
         <div class="audio-panel" id="audio-panel" hidden>
@@ -621,8 +620,8 @@
                 <button type="button" class="btn-voltar" onclick="abrirAba('jogo')" style="width:100%;min-height:44px;margin-bottom:14px;border-radius:12px;border:2px solid var(--ouro3);background:rgba(0,0,0,0.55);color:#fff;font-family:Oswald,sans-serif;font-size:16px;letter-spacing:2px;cursor:pointer">← VOLTAR AO JOGO</button>
                 <div class="rec-dif" id="rc-dif">NÍVEL: NORMAL</div>
                 <div class="rec-grid">
-                    <div class="rec destaque"><span class="rec-l">RECORDE DE SALDO</span><span class="rec-v" id="rc-rec">$100</span></div>
-                    <div class="rec destaque"><span class="rec-l">MAIOR GANHO</span><span class="rec-v" id="rc-ganho">$0</span></div>
+                    <div class="rec destaque"><span class="rec-l">RECORDE: MENOS GIROS PRA ZERAR</span><span class="rec-v" id="rc-rec">—</span></div>
+                    <div class="rec destaque"><span class="rec-l">GIROS NESTA PARTIDA</span><span class="rec-v" id="rc-ganho">0</span></div>
                     <div class="rec"><span class="rec-l">GIROS</span><span class="rec-v" id="rc-giros">0</span></div>
                     <div class="rec"><span class="rec-l">VITÓRIAS</span><span class="rec-v" id="rc-vit">0</span></div>
                     <div class="rec"><span class="rec-l">TAXA DE VITÓRIA</span><span class="rec-v" id="rc-taxa">0%</span></div>
@@ -1235,7 +1234,7 @@
             aplicarPerf();
         }
         function aplicarPerf() {
-            document.body.classList.toggle("perf", PERF);
+            document.documentElement.classList.toggle("perf", PERF);
             const b = document.getElementById("btn-perf"); if (b) { b.textContent = "⚡ MODO DESEMPENHO: " + (PERF ? "LIGADO" : "DESLIGADO"); b.classList.toggle("on", PERF); }
             if (FX.cv) fxRedim();
         }
@@ -1264,8 +1263,8 @@
         let resFinais = ["cereja", "7", "melancia"], emGiro = false, lastHopeMode = false;
         let moneySpamInterval = null;
 
-        function statsPadrao() { return { giros: 0, vit: 0, jackpots: 0, maiorGanho: 0, recorde: DIFICULDADES[dif].saldo, melhorSeq: 0, totalGanho: 0, banca: 0, hist: [] }; }
-        let stats = statsPadrao(), sequencia = 0, saldoExibido = 100, animSaldo = null;
+        function statsPadrao() { return { giros: 0, vit: 0, jackpots: 0, maiorGanho: 0, recorde: DIFICULDADES[dif].saldo, melhorSeq: 0, totalGanho: 0, banca: 0, melhorGiros: 0, hist: [] }; }
+        let giroPartida = 0, stats = statsPadrao(), sequencia = 0, saldoExibido = 100, animSaldo = null;
         const TODOS_SIMB = ["7", "cereja", "melancia", "limao"];
         function vis() { return TODOS_SIMB[Math.floor(Math.random() * TODOS_SIMB.length)]; }
         function cell(sym, mid) { return `<div class="cell${mid ? " mid" : ""}"><div class="symbol-box">${SYMBOLS_HTML[sym]}</div></div>`; }
@@ -1371,7 +1370,7 @@
         function atualizarPlacar() {
             if (saldo > stats.recorde) { stats.recorde = saldo; salvarStats(); }
             const t = (id, v) => { document.getElementById(id).textContent = v; };
-            t("rc-dif", "NÍVEL: " + D().nome); t("rc-rec", `$${stats.recorde}`); t("chip-rec", `$${stats.recorde}`); t("rc-ganho", `$${stats.maiorGanho}`); t("rc-giros", stats.giros); t("rc-vit", stats.vit);
+            t("rc-dif", "NÍVEL: " + D().nome); const mg = stats.melhorGiros ? `${stats.melhorGiros} ${stats.melhorGiros === 1 ? "giro" : "giros"}` : "—"; t("rc-rec", mg); t("chip-rec", mg); t("rc-ganho", giroPartida); t("rc-giros", stats.giros); t("rc-vit", stats.vit);
             t("rc-taxa", stats.giros ? Math.round(100 * stats.vit / stats.giros) + "%" : "0%"); t("rc-jack", stats.jackpots);
             t("rc-mseq", stats.melhorSeq); t("rc-seq", sequencia); t("rc-total", `$${stats.totalGanho}`); t("rc-banca", stats.banca);
             const ol = document.getElementById("rc-hist"); ol.innerHTML = "";
@@ -1450,6 +1449,8 @@
         function showMessage(text, color="#ffd700") { if (color === "#ffd700") color = getComputedStyle(document.documentElement).getPropertyValue("--ouro").trim() || color; const b = document.getElementById("msg-board"); b.innerHTML = text; b.style.color = color; b.style.textShadow = `0 0 10px ${color}88`; }
 
         let quebrado = false;
+        // ultimo giro = da pra pagar este, mas sobra menos que o preco de outro (ex.: $20 com giro $15)
+        function ultimoGiro() { return saldo >= custoGiro && saldo - custoGiro < custoGiro; }
         function checarSaldoZero() {
             if (emGiro) return;
             if (saldo < custoGiro) { if (!quebrado) { quebrado = true; Som.perda(); showMessage("💀 SALDO ZERADO! 💀", "#ff3333"); } }
@@ -1475,7 +1476,7 @@
             btnMulti.innerText = `⚡ MULTIPLICADOR ($${custoMulti})`;
             btnMulti.disabled = (saldo < custoMulti || emGiro);
 
-            if (saldo === custoGiro && !emGiro) {
+            if (ultimoGiro() && !emGiro) {
                 document.body.classList.add("last-hope");
                 showMessage("🚨 ÚLTIMA ESPERANÇA! MODO SOBREVIVÊNCIA ATIVADO! 🚨", "#ff0000");
             }
@@ -1489,10 +1490,10 @@
 
         function checarVitoriaMax() {
             if (saldo >= D().meta) {
-                stats.banca++; salvarStats(); document.getElementById("vit-texto").textContent = `A CASA CAIU! VOCÊ PASSOU DE $${D().meta.toLocaleString("pt-BR")}!`;
+                stats.banca++; const novoRec = !stats.melhorGiros || giroPartida < stats.melhorGiros; if (novoRec) stats.melhorGiros = giroPartida; salvarStats(); atualizarPlacar(); document.getElementById("vit-texto").textContent = `A CASA CAIU! VOCÊ PASSOU DE $${D().meta.toLocaleString("pt-BR")} EM ${giroPartida} ${giroPartida === 1 ? "GIRO" : "GIROS"}!`;
                 { const i = ORDEM_DIF.indexOf(dif), prox = ORDEM_DIF[i + 1], novo = prox && !venceu[dif];
                   venceu[dif] = true; salvarDif();
-                  document.getElementById("vit-desbloq").textContent = novo ? `🔓 NÍVEL ${DIFICULDADES[prox].nome} DESBLOQUEADO!` : (prox ? "" : "👑 VOCÊ ZEROU TODOS OS NÍVEIS!"); atualizarDifUI(); }
+                  document.getElementById("vit-desbloq").textContent = (novoRec ? `🏆 NOVO RECORDE: ${giroPartida} ${giroPartida === 1 ? "GIRO" : "GIROS"}! ` : "") + (novo ? `🔓 NÍVEL ${DIFICULDADES[prox].nome} DESBLOQUEADO!` : (prox ? "" : "👑 VOCÊ ZEROU TODOS OS NÍVEIS!")); atualizarDifUI(); }
                 document.getElementById("modal-vitoria").style.display = "flex";
                 Som.jackpot();
                 moneySpamInterval = setInterval(soltarNotaDinheiro, PERF ? 400 : 50); 
@@ -1520,7 +1521,7 @@
         function resetarTudo(manualRestart = false) {
             Som.init();
             limparBrilhos(); limparBandeja(); sequencia = 0;
-            rodaTravada = false; quebrado = false; custoGiro = D().giro; peso7 = D().peso7; saldo = D().saldo; nivelSorte = 0; bonusSorte = 0; custoSorte = D().sorte[0]; multiplicador = 1; custoMulti = D().multi[0]; lastHopeMode = false;
+            giroPartida = 0; rodaTravada = false; quebrado = false; custoGiro = D().giro; peso7 = D().peso7; saldo = D().saldo; nivelSorte = 0; bonusSorte = 0; custoSorte = D().sorte[0]; multiplicador = 1; custoMulti = D().multi[0]; lastHopeMode = false;
             cdTrava = 0; cdSorte = 0; modoSelecaoTrava = false; rolosTravados = [false, false, false];
             for(let i=0;i<3;i++) document.getElementById(`rw-${i}`).classList.remove("selectable", "locked", "win-glow", "pulse");
             resFinais = ["cereja", "7", "melancia"]; for (let i = 0; i < 3; i++) render(i, resFinais[i]); // telas voltam ao estado inicial
@@ -1591,8 +1592,8 @@
             if (saldo < custoGiro) { if (!quebrado) Som.perda(); quebrado = false; resetarTudo(); return; }
 
             document.getElementById("decision-panel").style.display = "none";
-            emGiro = true; lastHopeMode = (saldo === custoGiro); saldo -= custoGiro;
-            stats.giros++; salvarStats(); limparBrilhos();
+            emGiro = true; lastHopeMode = ultimoGiro(); saldo -= custoGiro;
+            stats.giros++; giroPartida++; salvarStats(); limparBrilhos();
             
             if(cdTrava > 0) cdTrava--; 
             if(cdSorte > 0) cdSorte--;
@@ -2160,5 +2161,3 @@
 
         Som.atualizarJpMus(); Som.carregarFaixas(); fxIniciar(); carregarPerf(); carregarDif(); carregarStats(); atualizarDifUI(); iniciarTemas(); render(0, "cereja"); render(1, "7"); render(2, "melancia"); atualizarUI(); abrirMenu();
     </script>
-
-</body></html>
